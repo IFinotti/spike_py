@@ -20,8 +20,10 @@ class Robot:
         self.motorD.set_default_speed(100)
 
     # Método do robô andar
-    def andar(self):
+    def andar(self) -> int:
+        timer = Timer()
         while self.cor.get_reflected_light() >= 100:
+            timer.time(5)
             self.motorA.start()
             self.motorB.start()
             self.motorC.start()
@@ -45,7 +47,7 @@ class Robot:
 
         if distance <= 5: # Se a distância for menor que cinco...
             timer = Timer() # Ativa um timer de 5 segundos
-            while timer.time() <= 5: 
+            while timer.time() <= 5: # Enquanto o timer for menor que 5s o robo vira as rodas até o timer apagar
                 self.motorA.run_for_degrees(45, 65) # O robô vira e anda por 5 segundos (até o timer acabar).
                 self.motorB.run_for_degrees(90, 55)
 
@@ -64,4 +66,4 @@ class Robot:
 
 if __name__ == "__main__":
     robo = Robot()
-    robo.run()
+    robo.run() 
