@@ -33,8 +33,8 @@ class Robot:
                 self.motorA.run_for_degrees(45, 65) # Motor A - (degrees, speed)
                 self.motorB.run_for_degrees(90, 55) # Motor B - (degrees, speed)
 
-                self.motorC.start(speed=50) # Os dois outros motores diminuem a velocidade para manter o controle na curva
-                self.motorD.start(speed=50)
+                self.motorC.start(speed=25) # Os dois outros motores diminuem a velocidade para manter o controle na curva
+                self.motorD.start(speed=25)
 
             else:
                 self.motorA.start()
