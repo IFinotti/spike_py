@@ -14,10 +14,10 @@ class Robot:
         self.motorC = Motor('C')
         self.motorD = Motor('D')
 
-        self.motorA.set_default_speed(100)
-        self.motorB.set_default_speed(100)
-        self.motorC.set_default_speed(100)
-        self.motorD.set_default_speed(100)
+        self.motorA.set_default_speed(50)
+        self.motorB.set_default_speed(50)
+        self.motorC.set_default_speed(50)
+        self.motorD.set_default_speed(50)
 
     # Método do robô andar
     def andar(self) -> int:
